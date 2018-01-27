@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.alexblass.meetme.OfflineFragment">
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/offline_error_tv"
+        android:layout_centerHorizontal="true"
+        android:text="@string/error"/>
+
+    <TextView
+        android:id="@+id/offline_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/std_text_size"
+        android:text="@string/error_network_connection"/>
+
+</RelativeLayout>
