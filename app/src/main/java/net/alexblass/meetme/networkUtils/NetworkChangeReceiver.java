@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
+import net.alexblass.meetme.OfflineActivity;
+
 /**
  * A BroadcastReceiver to detect changes in network connectivity.
  */
@@ -14,9 +16,13 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent intent) {
 
-        String status = NetworkUtils.getConnectivityStatusString(context);
-        Toast.makeText(context, status, Toast.LENGTH_SHORT).show();
+        int status = NetworkUtils.getConnectivityStatus(context);
 
-        // TODO: display no internet screen
+        if (status == NetworkUtils.TYPE_NOT_CONNECTED){
+            Intent offlineActivty = new Intent(context, OfflineActivity.class);
+            context.startActivity(offlineActivty);
+        }
+
+        // TODO: hide no internet screen when internet reconnects
     }
 }

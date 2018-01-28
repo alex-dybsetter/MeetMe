@@ -29,18 +29,4 @@ public class NetworkUtils {
         }
         return TYPE_NOT_CONNECTED;
     }
-
-    // TODO: Delete method -- for testing purposes only
-    public static String getConnectivityStatusString(Context context) {
-        int conn = NetworkUtils.getConnectivityStatus(context);
-        String status = null;
-        if (conn == NetworkUtils.TYPE_WIFI) {
-            status = "Wifi enabled";
-        } else if (conn == NetworkUtils.TYPE_MOBILE) {
-            status = "Mobile data enabled";
-        } else if (conn == NetworkUtils.TYPE_NOT_CONNECTED) {
-            status = "Not connected to Internet";
-        }
-        return status;
-    }
 }
