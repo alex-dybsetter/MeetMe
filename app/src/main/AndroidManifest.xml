@@ -20,15 +20,6 @@
             </intent-filter>
         </activity>
 
-        <!-- A receiver to detect network changes -->
-        <receiver
-            android:name=".networkUtils.NetworkChangeReceiver"
-            android:label="NetworkChangeReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
-
         <activity android:name=".OfflineActivity"></activity>
     </application>
 
